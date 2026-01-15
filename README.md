@@ -64,3 +64,5 @@ UE版本5.6.1
 从单机到联机双窗口的时候，因为不懂得UI是根据锚点+偏移显示的，导致一直看不到客户端的倒计时UI和得分UI，那时候找错方向一直在找代码的问题，反反复复了很久非常痛苦，结果最后一拉开客户端窗口就看见了UI，然后就想哭。
 
 二：网络PlayerController发ServerRPC，自己PlayerController.cpp执行了ServerRequestXXX_Implementation导致客户端本地执行而不是触发UE RPC机制。正常应该是应该调用.h的ServerRequestXXX，走RPC机制UE网络打包，让服务器端执行_Implementation。
+
+三：打包之后不知道为什么用来很多cpu资源80%多，但是明明编辑器开PIE双窗口的时候都不用这么多资源，后来发现原来打包的默认开了光追，配置关掉就好了
