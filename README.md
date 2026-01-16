@@ -66,3 +66,8 @@ UE版本5.6.1
 二：网络PlayerController发ServerRPC，自己PlayerController.cpp执行了ServerRequestXXX_Implementation导致客户端本地执行而不是触发UE RPC机制。正常应该是应该调用.h的ServerRequestXXX，走RPC机制UE网络打包，让服务器端执行_Implementation。
 
 三：打包之后不知道为什么用来很多cpu资源80%多，但是明明编辑器开PIE双窗口的时候都不用这么多资源，后来发现原来打包的默认开了光追，配置关掉就好了
+
+
+下一步计划：
+角色与动画（现在在做）
+AI
